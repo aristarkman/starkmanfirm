@@ -1,0 +1,136 @@
+name: Biweekly blog post
+
+# Writes the next Starkman Firm blog post and opens a pull request.
+#
+# Runs inside GitHub, so pushing is native — this is the whole reason the workflow
+# exists. The scheduled Claude task that used to do this ran in a sandbox that could
+# clone the repo but not push to it.
+#
+# SETUP (one time) — see claude/README.md for the walkthrough:
+#   1. Install the Claude GitHub App on this repo: https://github.com/apps/claude
+#   2. Add ONE repository secret under
+#      Settings -> Secrets and variables -> Actions -> New repository secret:
+#        CLAUDE_CODE_OAUTH_TOKEN   (bills against your Claude subscription)  <- default below
+#      or ANTHROPIC_API_KEY        (bills as API usage)
+#      If you use the API key instead, swap the auth line in the final step.
+
+on:
+  schedule:
+    # 13:17 UTC on the 1st and 15th = 9:17am ET in summer, 8:17am ET in winter.
+    # Deliberately not on the hour: GitHub's scheduler is busiest at :00 and delays runs.
+    - cron: "17 13 1,15 * *"
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: "Optional: force a topic instead of taking the top of the queue"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  id-token: write
+  actions: read
+
+concurrency:
+  group: biweekly-blog-post
+  cancel-in-progress: false
+
+jobs:
+  write-post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Check out the site
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install verification tooling
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Write and verify the post, then open a PR
+        uses: anthropics/claude-code-action@v1
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FORCED_TOPIC: ${{ inputs.topic }}
+        with:
+          # --- AUTHENTICATION -------------------------------------------------
+          # Using a Claude subscription (default). To bill as API usage instead,
+          # comment the line below and uncomment the one under it.
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # --------------------------------------------------------------------
+          prompt: |
+            You are writing the next biweekly blog post for the Starkman Firm
+            (starkmanfirm.com), a New Jersey personal injury and workers' compensation
+            firm. You are running inside a GitHub Actions runner with a full checkout of
+            the site at the current working directory. Work autonomously; nobody is watching.
+
+            FIRST, read these three files in the checkout and follow them. They are the
+            authoritative instructions and they override anything in this prompt that
+            conflicts with them:
+              - claude/blog-playbook.md     (firm details, voice, topic queue, what is published)
+              - claude/site-build-notes.md  (the exact recipe for adding a page)
+              - CLAUDE.md                   (project standards)
+
+            THEN:
+
+            1. TOPIC. Take the highest unused item in the playbook's topic queue, unless
+               something more timely has happened in New Jersey law. Never repeat a published
+               topic. If the environment variable FORCED_TOPIC is set and non-empty, write
+               that topic instead.
+
+            2. RESEARCH AND VERIFY. Use WebSearch and WebFetch. Every statute cite, dollar
+               figure, deadline and case name must be checked against a primary or
+               authoritative source this run — nj.gov, the NJ Department of Banking and
+               Insurance, the NJ Division of Workers' Compensation, NJ Courts, or a published
+               opinion. Do not state a number you have not confirmed today. Do not take a
+               reporter citation from a law-firm blog without confirming it. New Jersey law
+               only. The playbook's "Facts verified" sections list traps that have already
+               caught previous runs — read them.
+
+            3. WRITE AND BUILD. Save the new copy module to claude/scripts/copy_<YYYY-MM-DD>.py,
+               copy it to claude/scripts/copy.py, and run:
+                   python3 -I claude/scripts/build_post.py
+               from the repository root. That writes the English page under resources/<slug>/,
+               the Spanish page under es/recursos/<slug-es>/, adds a card to the top of both
+               index postlists, and adds both URLs to sitemap.xml with hreflang alternates.
+               It auto-detects the site, which in this checkout is the repo root; pass
+               --site PATH only if it picks the wrong one. The post must be 900-1,200 words in
+               each language — measure the rendered <article class="prose"> and trim if over.
+
+            4. VERIFY. Run:
+                   python3 -I claude/scripts/verify_site.py
+               All four checks must pass: zero broken relative links across every HTML file,
+               sitemap.xml parses, both new pages render in Playwright with no pageerror, and
+               the diff touches only the 2 new pages, the 2 index pages and sitemap.xml.
+               DO NOT OPEN A PULL REQUEST IF ANY CHECK FAILS. Instead, open a GitHub issue
+               titled "Blog post build failed <date>" describing exactly which check failed,
+               and stop.
+
+            5. OPEN A PULL REQUEST. Create a branch named claude/post-<YYYY-MM-DD>-<slug>,
+               commit only the five changed files, push it, and open a PR with `gh pr create`.
+               The PR body must contain: the topic and why it was chosen, the word counts, the
+               result of each of the four checks, and a table of every statute, dollar figure,
+               deadline and case name asserted in the post with the source URL checked this run.
+               DO NOT MERGE. A human reviews and merges — this content asserts law under
+               Morris Starkman's name and bar license.
+
+            6. RECORD. In the same commit, save the Markdown draft to
+               claude/posts/<YYYY-MM-DD>-<slug>.md, and update claude/blog-playbook.md: add the
+               post to the Published/drafted table, remove the topic from the queue, append one
+               new topic idea at the bottom, and add a dated "Facts verified" section.
+          claude_args: |
+            --max-turns 120
+            --allowedTools "Bash,Read,Write,Edit,Glob,Grep,WebSearch,WebFetch,TodoWrite"
