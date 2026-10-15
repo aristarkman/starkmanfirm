@@ -12,3 +12,73 @@
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# ---------------------------------------------------------------------------
+# Redirects from the old WordPress site, added 2026-10-15.
+#
+# Google Search Console was reporting 404s for URLs that existed before the
+# rebuild. Each rule below points an old URL at its closest equivalent on the
+# current site, so people following an old link or an old backlink land
+# somewhere useful instead of on an error page.
+#
+# Rules are processed top to bottom, and a redirect does NOT fire when a real
+# file matches the path, so none of these can shadow a live page.
+#
+# Deliberately NOT redirected, because they are genuinely gone and a 404 is the
+# correct answer for genuinely gone content:
+#   /wp-content/*                            old WordPress media and theme files
+#   /wp-content/themes/hello-elementor/*     old Elementor theme assets
+#   /feed/                                   the old RSS feed
+#   /sample-page/                            WordPress's default placeholder page
+# Pointing those at the homepage would be worse than a 404: Google treats a
+# mass redirect of dead URLs to an unrelated page as a soft 404. They will drop
+# out of Search Console on their own.
+# ---------------------------------------------------------------------------
+
+# The old blog index.
+[[redirects]]
+  from = "/blogs/"
+  to = "/resources/"
+  status = 301
+
+[[redirects]]
+  from = "/blogs/*"
+  to = "/resources/"
+  status = 301
+
+# An old blog post about traffic stops -> the practice area that covers it.
+[[redirects]]
+  from = "/traffic-stop-what-should-i-do/"
+  to = "/criminal-municipal-court/"
+  status = 301
+
+# Old practice-area naming.
+[[redirects]]
+  from = "/municipal-law/"
+  to = "/criminal-municipal-court/"
+  status = 301
+
+# Old attorney pages.
+[[redirects]]
+  from = "/attorneys/morris-starkman-esq/"
+  to = "/attorneys/"
+  status = 301
+
+[[redirects]]
+  from = "/our-team/"
+  to = "/attorneys/"
+  status = 301
+
+# Old testimonials page -> case results.
+[[redirects]]
+  from = "/reviews/"
+  to = "/results/"
+  status = 301
+
+# Old contact page -> the offices page, which carries both addresses, both
+# phone numbers and the hours. Change this to /free-case-review/ if you would
+# rather send that traffic straight to the consultation form.
+[[redirects]]
+  from = "/contact-us/"
+  to = "/offices/"
+  status = 301
