@@ -78,6 +78,7 @@ with the "not legal advice" disclaimer.
 | 3 | 2026-09-15 | `how-much-does-workers-comp-pay-nj` | What NJ comp actually pays |
 | 4 | 2026-10-01 | `construction-injury-comp-and-third-party-claim-nj` | Construction injuries: comp vs. the third-party claim |
 | 5 | 2026-10-15 | `slip-and-fall-notice-nj` | Slip and fall: proving the owner had notice |
+| 6 | 2026-11-01 | `underinsured-motorist-coverage-nj` | Underinsured motorist coverage: the limit-vs-limit test, the offset, no stacking, notice before settling |
 
 **Shelved:** a 2026-09-01 retaliation post (`fired-for-filing-workers-comp-nj`) was written
 and verified, then shelved at Ari's direction. `copy_2026-09-01.py` is retained. Do not
@@ -91,27 +92,59 @@ publish it unasked.
 
 ## Topic queue — take the top unused one, unless something more timely has happened
 
-1. Underinsured motorist coverage — the number on your policy that matters most
-2. Injured driving for work in NJ: comp, third-party, or both — **narrow or merge**; the
+1. Injured driving for work in NJ: comp, third-party, or both — **narrow or merge**; the
    construction post covers the comp/third-party split and the 34:15-40 lien in general
    terms. Keep only if it goes deep on auto-specific ground: PIP vs. comp primacy, the
    verbal threshold applying to the third-party auto case, UM/UIM stacking with a comp lien
-3. Hurt at work but the employer says you're a 1099 contractor
-4. Social media and your NJ injury claim: what the carrier's investigator actually looks for
-5. The independent medical exam: what the carrier's doctor is actually measuring
-6. The workers' comp lien on your injury settlement: what N.J.S.A. 34:15-40 really leaves
+2. Hurt at work but the employer says you're a 1099 contractor
+3. Social media and your NJ injury claim: what the carrier's investigator actually looks for
+4. The independent medical exam: what the carrier's doctor is actually measuring
+5. The workers' comp lien on your injury settlement: what N.J.S.A. 34:15-40 really leaves
    you — a numbers post working a sample recovery through subsections (b), (c) and (e),
    including the $750 cap and the 33 1/3% reduction. "Workers comp lien" is high-intent
-7. **Snow and ice on a New Jersey sidewalk: whose job was it?** The 10-15 post states the
+6. **Snow and ice on a New Jersey sidewalk: whose job was it?** The 10-15 post states the
    *Stewart* / *Luchejko* commercial-vs-residential line in two sentences but does not work
    it — lease-shifting between landlord and tenant, the condo and co-op cases, the "created
    or exacerbated" exception for residential owners, and municipal snow ordinances that
    impose a duty to the town but not to you. Strongly seasonal; schedule for December
    or January
+7. Hit-and-run and phantom vehicles in NJ: what the uninsured motorist claim requires —
+   follow-up to the 2026-11-01 UIM post; verify the physical-contact and proof rules from
+   the policy language and published opinions before writing
 
 **Dropped:** NJ permanency awards / the schedule of disabilities — the 2026-09-15 post
 already covers the 600-week math and the scheduled members. The authorized treating
-physician — covered by the 2026-08-31 doctor post; revisit only from the IME angle (item 5).
+physician — covered by the 2026-08-31 doctor post; revisit only from the IME angle (item 4).
+
+## Facts verified 2026-11-01 (re-verify before reuse)
+
+- **N.J.S.A. 17:28-1.1** as amended by **P.L. 2022, c.87** (approved Aug. 5, 2022; text read at
+  pub.njleg.gov, session law — **not** the codified text; check lis.njleg.state.nj.us before
+  reuse). Required UM/UIM bodily injury minimum: **$15,000/$30,000** before 1/1/2023,
+  **$25,000/$50,000** from 1/1/2023, **$35,000/$70,000** from 1/1/2026. Basic policy excepted.
+  UM/UIM property damage: **$25,000** aggregate for plans on/after 1/1/2023, first **$500**
+  excluded.
+- **17:28-1.1(b)** — insurer must offer UM/UIM "up to at least" **$250,000/$500,000** BI, but
+  limits "shall not exceed the insured's motor vehicle liability policy limits."
+- **17:28-1.1(c)** — no stacking across vehicles on one policy or across policies; multiple
+  policies: recovery not above the higher limit, prorated.
+- **17:28-1.1(d)** — subject to policy terms incl. "unauthorized settlements," subrogation,
+  arbitration. **(e)** — underinsured when tortfeasor's total BI+PD limits are "less than the
+  applicable limits for underinsured motorist coverage" on the injured person's policy; not
+  underinsured unless tortfeasor BI limits "have been exhausted by payment of settlements or
+  judgments"; UIM limits "shall be reduced by the amount he has recovered." **(f)** — business
+  policy: employee gets no less UM/UIM than the named insured.
+- First sentence of (a) applies the elected tort option to **uninsured** motorist coverage by
+  its literal text; the post does not claim it applies to UIM.
+- **DOBI** autoplanner page (nj.gov/dobi/autoplanner/frmuninsandundinschoice.htm): UIM claim
+  "cannot exceed the difference between your liability limit and that of the other driver."
+- ***Ferrante v. New Jersey Manufacturers Insurance Group***, NJ Supreme Court, A-87-16, decided
+  **Apr. 11, 2018** (syllabus on njcourts.gov): "complete absence of notice" over years of
+  litigation, including a high-low agreement and jury trial, lets the carrier refuse UIM
+  benefits. Cited by name/court/date only — the **232 N.J. 460** cite appeared only in a
+  secondary summary and was **not** confirmed. *Longworth* (App. Div. 1988) and *Zirger* (N.J.) are named in the opinion but no reporter cite was confirmed; not used in the post.
+- **Pending:** S3120 (2026 session) would make UM/UIM compulsory and repeal no-fault. Introduced
+  only, "Pending Technical Review."
 
 ## Facts verified 2026-10-15 (re-verify before reuse)
 
