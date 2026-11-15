@@ -1,289 +1,280 @@
 # -*- coding: utf-8 -*-
-"""Post copy for 2026-11-01 — underinsured motorist coverage: the number on your policy that matters most."""
+"""Post copy for 2026-11-15 — injured driving for work: comp, the auto claim, or both."""
 
-DATE = "2026-11-01"
+DATE = "2026-11-15"
 
-EN_SLUG = "underinsured-motorist-coverage-nj"
-ES_SLUG = "cobertura-motorista-con-seguro-insuficiente-nj"
+EN_SLUG = "injured-driving-for-work-nj"
+ES_SLUG = "lesion-manejando-para-el-trabajo-nj"
 
-EN_TITLE = "Underinsured motorist coverage in NJ: the number that matters most"
-ES_TITLE = "Cobertura UIM en NJ: el número de su póliza que más importa"
+EN_TITLE = "Injured driving for work in NJ: workers' comp, a car claim, or both"
+ES_TITLE = "Lesionado manejando para el trabajo en NJ: compensación, reclamo de auto o ambos"
 
-EN_DESC = ("If the driver who hit you carries too little insurance, your own underinsured motorist "
-           "coverage pays the gap. How New Jersey decides, and what can void it.")
-ES_DESC = ("Si el conductor que lo chocó tiene muy poco seguro, su propia cobertura para "
-           "motoristas con seguro insuficiente paga la diferencia. Cómo lo decide Nueva Jersey.")
+EN_DESC = ("Hurt in a crash while driving for your job in New Jersey? When comp covers the trip, "
+           "why it pays before PIP, and how the claim against the other driver works.")
+ES_DESC = ("¿Se lesionó en un choque manejando para su trabajo en Nueva Jersey? Cuándo cubre la "
+           "compensación el viaje, por qué paga antes que PIP y cómo funciona el reclamo.")
 
-EN_LEAD = ("The other driver's insurance pays first. Yours pays what is left, up to your limit. "
-           "If you never looked at that limit, look at it before you need it.")
-ES_LEAD = ("El seguro del otro conductor paga primero. El suyo paga lo que falte, hasta su límite. "
-           "Si nunca miró ese límite, mírelo antes de necesitarlo.")
+EN_LEAD = ("A crash on the job can open two claims: workers' compensation and a lawsuit against "
+           "the other driver. The order you handle them in matters.")
+ES_LEAD = ("Un choque en el trabajo puede abrir dos reclamos: compensación laboral y una demanda "
+           "contra el otro conductor. El orden en que los maneja importa.")
 
-EN_BYLINE = "Published November 1, 2026 · Morris Starkman"
-ES_BYLINE = "Publicado el 1 de noviembre de 2026 · Morris Starkman"
+EN_BYLINE = "Published November 15, 2026 · Morris Starkman"
+ES_BYLINE = "Publicado el 15 de noviembre de 2026 · Morris Starkman"
 
-EN_CARD_DATE = "Nov 1, 2026"
-ES_CARD_DATE = "1 nov 2026"
+EN_CARD_DATE = "Nov 15, 2026"
+ES_CARD_DATE = "15 nov 2026"
 
 EN_MORE = [
-    ("What to do after a car accident in New Jersey",
-     "../what-to-do-after-a-car-accident-in-nj/index.html"),
-    ("How long do I have to file a claim in New Jersey?",
-     "../how-long-do-i-have-to-file-nj/index.html"),
+    ("Construction injuries: workers' comp and the third-party claim",
+     "../construction-injury-comp-and-third-party-claim-nj/index.html"),
     ("Limited vs. unlimited right to sue: which did you pick?",
      "../nj-limited-vs-unlimited-right-to-sue/index.html"),
+    ("Underinsured motorist coverage in NJ: the number that matters most",
+     "../underinsured-motorist-coverage-nj/index.html"),
 ]
 
 ES_MORE = [
-    ("¿Qué hacer después de un accidente de carro en Nueva Jersey?",
-     "../que-hacer-despues-de-un-accidente/index.html"),
-    ("¿Cuánto tiempo tengo para presentar un reclamo en Nueva Jersey?",
-     "../cuanto-tiempo-tengo/index.html"),
+    ("Lesión en construcción: compensación laboral y reclamo contra terceros",
+     "../lesion-en-construccion-compensacion-y-terceros/index.html"),
     ("¿Derecho limitado o ilimitado a demandar? Cuál eligió usted",
      "../derecho-limitado-o-ilimitado-a-demandar/index.html"),
+    ("Cobertura UIM en NJ: el número de su póliza que más importa",
+     "../cobertura-motorista-con-seguro-insuficiente-nj/index.html"),
 ]
 
 CITATIONS = [
-    "https://pub.njleg.gov/Bills/2022/PL22/87_.HTM",
-    "https://nj.gov/dobi/autoplanner/frmuninsandundinschoice.htm",
-    "https://www.njcourts.gov/system/files/court-opinions/2018/a_87_16.pdf",
+    "https://www.nj.gov/labor/workerscompensation/assets/PDFs/Forms/wc_law.pdf",
+    "https://www.njcourts.gov/system/files/court-opinions/2023/a_30_22.pdf",
+    "https://www.njcourts.gov/system/files/court-opinions/2020/a_68_18.pdf",
+    "https://www.njcourts.gov/sites/default/files/charges/5.33.pdf",
 ]
 
 EN_BODY = """
-<h2>Find the underinsured number on your declarations page</h2>
-<p>Most people know their liability limits. Almost nobody knows the line below it:
-<strong>uninsured/underinsured motorist coverage</strong>, often written "UM/UIM." It pays you when
-someone else causes the crash and cannot cover what you lost. In a serious injury case, it is
-often the largest check available.</p>
-<p>New Jersey sets a floor. Under <strong>N.J.S.A. 17:28-1.1</strong>, a standard policy issued or
-renewed on or after January 1, 2026 must carry at least <strong>$35,000 per person and $70,000
-per accident</strong> for bodily injury. A basic policy is excepted from that requirement. That
-floor is thin. Plenty of hospital stays cost more.</p>
-
-<h2>Know when a driver counts as underinsured</h2>
-<p>The statute gives a precise test. A vehicle is underinsured when the total liability limits
-available to the at-fault driver are "less than the applicable limits for underinsured motorist
-coverage" on <em>your</em> policy. The comparison is limit against limit. It is not your damages
-against their policy.</p>
-<p>Two consequences follow:</p>
+<h2>Ask first whether the trip counts as work</h2>
+<p>Workers' compensation covers injuries "in the course of employment." Driving to your regular
+job usually is not. N.J.S.A. 34:15-36 says employment begins when you arrive at the employer's
+place of employment to report for work, and ends when you leave it. But the same section makes
+exceptions. One is for an employee "who utilizes an employer authorized vehicle," whose
+employment runs with "the authorized operation of a vehicle on business authorized by the
+employer."</p>
+<p>The Supreme Court applied that rule in <em>Keim v. Above All Termite &amp; Pest Control</em>
+(N.J. Nov. 21, 2023). Keim drove a company truck from home to job sites. One morning he clocked
+in, saw he was short on supplies and headed to the shop to restock. He was hit on the way. The
+Court held that he was covered, and gave a two-part test:</p>
 <ul>
-<li>If you carry $35,000 and the other driver carries $35,000, that driver is not underinsured.
-You have no UIM claim, however badly you were hurt.</li>
-<li>If you carry $100,000 and the other driver carries $35,000, that driver is underinsured.</li>
+<li>The employer authorized the vehicle for you to operate.</li>
+<li>You were operating that vehicle for business the employer expressly authorized.</li>
 </ul>
-<p>The test also requires that the at-fault driver's bodily injury limits "have been exhausted by
-payment of settlements or judgments." You collect from them first.</p>
+<p>The Court also said the rule does not apply every time you drive an authorized vehicle, and
+does not cover a worker who is "merely" commuting. Run an errand for your boss and you may be
+covered. Drive straight to the first stop of the day and the answer is harder.</p>
 
-<h2>Do the subtraction before you celebrate</h2>
-<p>The statute also says your UIM limit "shall be reduced by the amount he has recovered" from the
-at-fault driver's liability coverage. Here is a made-up example, not a prediction:</p>
+<h2>Let workers' comp pay the medical bills, not your auto policy</h2>
+<p>New Jersey auto policies carry personal injury protection, or PIP, which pays medical bills
+whoever caused the crash. When you are hurt working, the statute sends those bills elsewhere.
+N.J.S.A. 39:6A-6 says benefits "collectible under workers' compensation insurance" shall be
+deducted from the PIP benefits otherwise collectible. In plain terms, comp pays first.</p>
+<p>That has a practical edge. Do not assume your auto carrier will pick up what comp should have
+paid. If the employer denies the claim, ask us before you decide which carrier to bill.</p>
+<p>Give your employer notice of the injury within 14 days. N.J.S.A. 34:15-17 gives limited relief
+up to 30 days and, with a good excuse, up to 90 days. After 90 days without notice or
+knowledge, "no compensation shall be allowed." You then have two years from the accident to file
+a claim petition with the Division of Workers' Compensation (N.J.S.A. 34:15-51), or from the last
+payment if the carrier has paid.</p>
+
+<h2>Know that you can still sue the other driver</h2>
+<p>Comp does not turn on proving fault. N.J.S.A. 34:15-7 says it is paid "without regard to the
+negligence of the employer." If someone else caused the wreck, you can pursue them as well, and
+that lawsuit is where a claim for pain and suffering lives. N.J.S.A. 34:15-40 says
+your right to compensation "shall not operate as a bar to the action of the employee." The
+general deadline for a personal injury lawsuit is two years, according to the New Jersey Courts.</p>
+<p>Do not sit on that claim, because the comp carrier can take it over. Under 34:15-40(f), if you
+neither settle nor sue within one year of the accident, the carrier can send a written demand.
+Ten days later it may settle with the at-fault driver or sue. That settlement or judgment
+"shall constitute a bar to any further claim or action" by you against that driver. The carrier
+is looking out for its own reimbursement, not for your pain and suffering.</p>
+
+<h2>Expect the comp carrier to claim part of your recovery</h2>
+<p>If you recover from the other driver, the carrier gets repaid for what it paid you. Under
+34:15-40(b), it is reimbursed for medical expenses and compensation paid, "less employee's
+expenses of suit and attorney's fee." Those deductions are capped. Expenses count up to $750.
+The attorney's fee counts up to 33 1/3% of the part the carrier is reimbursed.</p>
+<p>If your recovery is smaller than what the carrier owes you, subsection (c) makes the carrier
+liable for the difference. Do not settle the car claim without a lawyer who has run those
+numbers against your comp file.</p>
+
+<h2>Prepare for the verbal threshold</h2>
+<p>The third-party case is a car accident case, and the usual auto rules apply. If your policy
+carries the limitation on lawsuit option, N.J.S.A. 39:6A-8(a) bars a claim for pain and suffering
+unless your injury falls in one of six categories:</p>
 <ul>
-<li>You carry $100,000 in UIM coverage.</li>
-<li>The other driver carries $35,000 and the insurer pays it.</li>
-<li>Your UIM coverage is $100,000 minus $35,000. That leaves <strong>$65,000</strong>.</li>
+<li>Death.</li>
+<li>Dismemberment.</li>
+<li>Significant disfigurement or significant scarring.</li>
+<li>A displaced fracture.</li>
+<li>Loss of a fetus.</li>
+<li>A permanent injury within a reasonable degree of medical probability, other than scarring
+or disfigurement.</li>
 </ul>
-<p>Your total from both policies tops out at $100,000, no matter what the jury says your harm
-was worth. The state's Department of Banking and Insurance puts it the same way: your claim
-cannot exceed the difference between your limit and the other driver's.</p>
+<p>We check which tort option applies to you first. Read our <a href="../nj-limited-vs-unlimited-right-to-sue/index.html">limited vs.
+unlimited guide</a> to see what you chose.</p>
 
-<h2>Raise your liability limit to raise your UIM limit</h2>
-<p>You cannot buy UIM coverage above your own liability coverage. The statute says UM/UIM limits
-"shall not exceed the insured's motor vehicle liability policy limits." Insurers must offer UM/UIM
-up to at least $250,000 per person and $500,000 per accident on a standard policy, but never
-higher than your liability limits.</p>
-<p>So the way to protect yourself is to raise the liability limit. That feels backwards. You are
-buying coverage that protects the other person. It also lifts the ceiling on the coverage that
-protects you.</p>
+<h2>Know where the courts have not settled the question</h2>
+<p>Whether the no-fault auto law blocks a comp carrier from suing the at-fault driver was
+contested. In <em>New Jersey Transit Corp. v. Sanchez</em> (N.J. May 12, 2020), the Supreme
+Court was equally divided and left the Appellate Division's ruling for the carrier in place, so
+there is no binding Supreme Court opinion. If a carrier is pursuing the other driver, ask your
+lawyer how that affects you.</p>
 
-<h2>Do not count on stacking</h2>
-<p>In some states you add the coverage on each car. Not here. N.J.S.A. 17:28-1.1(c) says UM/UIM
-coverage "shall not be increased by stacking" the limits of multiple vehicles on one policy, or
-the limits of multiple policies. If more than one policy applies, recovery cannot exceed the
-higher of the limits, and the policies share it in proportion. A second car does not double
-your coverage.</p>
-
-<h2>Tell your insurer before you settle</h2>
-<p>This is where valid claims die. The at-fault driver's insurer offers its limit. You are
-tempted to take it and move on. Do not accept until your own carrier has been told.</p>
-<p>The statute makes UIM coverage subject to policy terms on "unauthorized settlements" and
-subrogation, and the Supreme Court has enforced the point. In <em>Ferrante v. New Jersey
-Manufacturers Insurance Group</em> (N.J. Apr. 11, 2018), the driver sued the at-fault driver
-and never told his own carrier. He was never given a chance to step in. The Court held that
-because of the "complete absence of notice" over years of litigation, the carrier could refuse
-to pay UIM benefits.</p>
-<p>The rule is simple:</p>
-<ul>
-<li>Give your carrier written notice when you file suit against the at-fault driver.</li>
-<li>Give written notice of every settlement offer before you accept it.</li>
-<li>Give notice of any arbitration, high-low agreement or trial date.</li>
-</ul>
-<p>The carrier can then pay you the offered amount and take over your claim against the other
-driver, or let you settle. Either way, you keep your claim. That is why it matters who is
-handling this for you.</p>
-
-<h2>Check the pieces that change the claim</h2>
-<ul>
-<li><strong>Your lawsuit option.</strong> The statute ties the tort option you elected to
-non-economic loss in uninsured motorist claims. Ask how it applies to yours, and read our
-<a href="../nj-limited-vs-unlimited-right-to-sue/index.html">limited vs. unlimited guide</a>.</li>
-<li><strong>A business-owned car.</strong> If a company's policy covers the vehicle you were
-driving, an employee cannot receive less UM/UIM coverage than the named insured. Ask for the
-company's declarations page.</li>
-<li><strong>Property damage.</strong> UM/UIM property damage carries a $25,000 aggregate limit
-on plans issued or renewed on or after January 1, 2023, with the first $500 excluded.</li>
-<li><strong>Hit-and-run.</strong> A hit-and-run vehicle is treated as an uninsured vehicle, which
-makes this coverage the one that pays.</li>
-</ul>
-<p>Changes are pending in Trenton, including a bill that would make UM/UIM compulsory. It has
-only been introduced. Plan around the law as it stands today.</p>
-<p>At Starkman Firm you see the attorney, not a case manager. If an insurer has offered you its
-limit, call before you sign anything: Cherry Hill 856-424-7277 or Perth Amboy 732-324-2011.
-There is no fee unless we recover for you, and we work in English and Spanish.</p>
+<h2>Call before you sign anything</h2>
+<p>Do not give a recorded statement to either insurer, and do not sign a comp settlement or a car
+release before someone has read it against the other claim. A release on one side can shrink the
+other.</p>
+<p>At Starkman Firm you see the attorney, not a case manager. Call Cherry Hill 856-424-7277 or
+Perth Amboy 732-324-2011. We charge no fee unless we recover for you, and we work in English
+and Spanish.</p>
 """
 
 ES_BODY = """
-<h2>Busque el número de motoristas con seguro insuficiente en su póliza</h2>
-<p>La mayoría sabe cuáles son sus límites de responsabilidad. Casi nadie conoce la línea de
-abajo: la <strong>cobertura para motoristas sin seguro o con seguro insuficiente</strong>, a
-menudo escrita "UM/UIM". Le paga cuando otra persona causa el choque y no puede cubrir lo que
-usted perdió. En una lesión grave, suele ser el cheque más grande disponible.</p>
-<p>Nueva Jersey fija un mínimo. Según la <strong>N.J.S.A. 17:28-1.1</strong>, una póliza estándar
-emitida o renovada a partir del 1 de enero de 2026 debe incluir al menos <strong>$35,000 por
-persona y $70,000 por accidente</strong> por lesiones corporales. La póliza básica está exceptuada
-de ese requisito. Ese mínimo es escaso. Muchas hospitalizaciones cuestan más.</p>
-
-<h2>Sepa cuándo un conductor cuenta como asegurado de forma insuficiente</h2>
-<p>La ley da una prueba precisa. Un vehículo tiene seguro insuficiente cuando el total de los
-límites de responsabilidad disponibles del conductor culpable es "menor que los límites
-aplicables de cobertura para motoristas con seguro insuficiente" de <em>su</em> póliza. Se
-comparan límite contra límite. No se comparan sus daños contra la póliza del otro.</p>
-<p>De ahí se desprende:</p>
+<h2>Pregunte primero si el viaje cuenta como trabajo</h2>
+<p>La compensación laboral cubre lesiones "en el curso del empleo". Manejar a su trabajo habitual
+normalmente no lo es. La N.J.S.A. 34:15-36 dice que el empleo comienza cuando usted llega al
+lugar de trabajo del empleador para reportarse, y termina cuando se va. Pero la misma sección
+hace excepciones. Una es para el empleado "que utiliza un vehículo autorizado por el empleador",
+cuyo empleo abarca "la operación autorizada de un vehículo en asuntos autorizados por el
+empleador".</p>
+<p>La Corte Suprema aplicó esa regla en <em>Keim v. Above All Termite &amp; Pest Control</em>
+(N.J., 21 de noviembre de 2023). Keim manejaba un camión de la empresa de su casa a los sitios
+de trabajo. Una mañana marcó su entrada, vio que le faltaban materiales y se dirigió al taller a
+reabastecerse. Lo chocaron en el camino. La Corte resolvió que estaba cubierto y fijó una prueba
+de dos partes:</p>
 <ul>
-<li>Si usted tiene $35,000 y el otro conductor tiene $35,000, ese conductor no tiene seguro
-insuficiente. No hay reclamo UIM, por grave que haya sido su lesión.</li>
-<li>Si usted tiene $100,000 y el otro conductor tiene $35,000, sí lo tiene.</li>
+<li>El empleador autorizó el vehículo para que usted lo manejara.</li>
+<li>Usted manejaba ese vehículo para un asunto que el empleador autorizó expresamente.</li>
 </ul>
-<p>La prueba también exige que los límites de lesiones corporales del conductor culpable "se
-hayan agotado mediante el pago de acuerdos o sentencias". Primero cobra de él.</p>
+<p>La Corte también dijo que la regla no aplica cada vez que se maneja un vehículo autorizado, y
+que no cubre a quien "simplemente" va y viene del trabajo. Si hace un mandado para su jefe,
+puede estar cubierto. Si va directo a la primera parada del día, la respuesta es más difícil.</p>
 
-<h2>Haga la resta antes de celebrar</h2>
-<p>La ley dice además que su límite UIM "se reducirá por la cantidad que haya recuperado" de la
-cobertura de responsabilidad del conductor culpable. Un ejemplo inventado, no una predicción:</p>
+<h2>Deje que la compensación pague lo médico, no su póliza de auto</h2>
+<p>Las pólizas de auto de Nueva Jersey incluyen protección contra lesiones personales, o PIP, que
+paga las cuentas médicas sin importar quién causó el choque. Cuando usted se lesiona trabajando,
+la ley manda esas cuentas a otro lado. La N.J.S.A. 39:6A-6 dice que los beneficios "cobrables
+bajo el seguro de compensación laboral" se deducirán de los beneficios PIP que de otro modo se
+podrían cobrar. En palabras simples, la compensación paga primero.</p>
+<p>Esto tiene un efecto práctico. No dé por hecho que su aseguradora de auto pagará lo que la
+compensación debió pagar. Si el empleador niega el reclamo, pregúntenos antes de decidir a qué aseguradora cobrar.</p>
+<p>Avise a su empleador de la lesión dentro de 14 días. La N.J.S.A. 34:15-17 da alivio limitado
+hasta 30 días y, con una buena excusa, hasta 90 días. Pasados 90 días sin aviso ni conocimiento,
+"no se permitirá compensación alguna". Después tiene dos años desde el accidente para presentar
+una petición ante la División de Compensación Laboral (N.J.S.A. 34:15-51), o desde el último
+pago si la aseguradora ha pagado.</p>
+
+<h2>Sepa que todavía puede demandar al otro conductor</h2>
+<p>La compensación no depende de probar culpa. La N.J.S.A. 34:15-7 dice que se paga "sin
+importar la negligencia del empleador". Si otra persona causó el choque, también puede
+reclamarle, y esa demanda es donde vive el reclamo por dolor y sufrimiento. La N.J.S.A.
+34:15-40 dice que su derecho a compensación "no será un impedimento para la acción del
+empleado". El plazo general para una demanda por lesiones personales es de dos años, según las
+Cortes de Nueva Jersey.</p>
+<p>No deje dormir ese reclamo, porque la aseguradora de compensación puede tomarlo. Según la
+34:15-40(f), si usted no llega a un acuerdo ni demanda dentro de un año del accidente, la
+aseguradora puede enviar una demanda escrita. Diez días después puede negociar con el conductor
+culpable o demandarlo. Ese acuerdo o sentencia "constituirá un impedimento para cualquier otro
+reclamo o acción" suya contra ese conductor. La aseguradora cuida su propio reembolso, no su
+dolor y sufrimiento.</p>
+
+<h2>Espere que la aseguradora de compensación reclame parte de su recuperación</h2>
+<p>Si recupera dinero del otro conductor, la aseguradora recupera lo que le pagó a usted. Según la
+34:15-40(b), se le reembolsan los gastos médicos y la compensación pagada, "menos los gastos de
+demanda y los honorarios de abogado del empleado". Esas deducciones tienen tope. Los gastos
+cuentan hasta $750. Los honorarios, hasta el 33 1/3% de la parte que se reembolsa a la
+aseguradora.</p>
+<p>Si su recuperación es menor que lo que la aseguradora le debe, el inciso (c) la hace
+responsable de la diferencia. No llegue a un acuerdo del reclamo de auto sin un abogado que haya
+hecho esas cuentas contra su expediente de compensación.</p>
+
+<h2>Prepárese para el umbral verbal</h2>
+<p>El caso contra el tercero es un caso de accidente de auto, y aplican las reglas usuales. Si su
+póliza tiene la opción de limitación de demanda, la N.J.S.A. 39:6A-8(a) prohíbe reclamar dolor y
+sufrimiento a menos que su lesión caiga en una de seis categorías:</p>
 <ul>
-<li>Usted tiene $100,000 de cobertura UIM.</li>
-<li>El otro conductor tiene $35,000 y su aseguradora los paga.</li>
-<li>Su cobertura UIM es $100,000 menos $35,000. Quedan <strong>$65,000</strong>.</li>
+<li>Muerte.</li>
+<li>Desmembramiento.</li>
+<li>Desfiguración o cicatrices significativas.</li>
+<li>Una fractura desplazada.</li>
+<li>Pérdida de un feto.</li>
+<li>Una lesión permanente dentro de un grado razonable de probabilidad médica, distinta de
+cicatrices o desfiguración.</li>
 </ul>
-<p>Su total entre ambas pólizas llega a $100,000, sin importar lo que el jurado diga que valió su
-daño. El Departamento de Banca y Seguros del estado lo dice igual: su reclamo no puede exceder la
-diferencia entre su límite y el del otro conductor.</p>
-
-<h2>Suba su límite de responsabilidad para subir su límite UIM</h2>
-<p>No se puede comprar cobertura UIM por encima de la propia cobertura de responsabilidad. La ley
-dice que los límites UM/UIM "no excederán los límites de responsabilidad de la póliza del
-asegurado". Las aseguradoras deben ofrecer UM/UIM hasta al menos $250,000 por persona y $500,000
-por accidente en una póliza estándar, pero nunca por encima de sus límites de responsabilidad.</p>
-<p>Así que la forma de protegerse es subir el límite de responsabilidad. Parece al revés: compra
-una cobertura que protege a otra persona. Pero también sube el techo de la que lo protege a
-usted.</p>
-
-<h2>No cuente con sumar coberturas</h2>
-<p>En algunos estados se suma la cobertura de cada carro. Aquí no. La N.J.S.A. 17:28-1.1(c) dice
-que la cobertura UM/UIM "no se aumentará mediante la acumulación" de los límites de varios
-vehículos de una misma póliza ni de varias pólizas. Si aplica más de una póliza, la recuperación
-no puede exceder el mayor de los límites, y las pólizas la reparten en proporción. Un segundo
-carro no duplica su cobertura.</p>
-
-<h2>Avise a su aseguradora antes de llegar a un acuerdo</h2>
-<p>Aquí mueren reclamos válidos. La aseguradora del conductor culpable ofrece su límite. Tienta
-aceptarlo y seguir adelante. No acepte hasta que su propia aseguradora haya sido informada.</p>
-<p>La ley sujeta la cobertura UIM a los términos de la póliza sobre "acuerdos no autorizados" y
-subrogación, y la Corte Suprema lo ha aplicado. En <em>Ferrante v. New Jersey Manufacturers
-Insurance Group</em> (N.J., 11 de abril de 2018), el conductor demandó al culpable y nunca avisó a
-su propia aseguradora. Nunca se le dio la oportunidad de intervenir. La Corte resolvió que, por
-la "ausencia total de aviso" durante años de litigio, la aseguradora podía negarse a
-pagar los beneficios UIM.</p>
-<p>La regla es sencilla:</p>
-<ul>
-<li>Avise por escrito a su aseguradora cuando demande al conductor culpable.</li>
-<li>Avise por escrito de cada oferta de acuerdo antes de aceptarla.</li>
-<li>Avise de cualquier arbitraje, acuerdo alto-bajo o fecha de juicio.</li>
-</ul>
-<p>La aseguradora puede entonces pagarle la cantidad ofrecida y asumir su reclamo contra el otro
-conductor, o dejar que usted llegue al acuerdo. De cualquier forma, usted conserva su reclamo. Por
-eso importa quién lo maneja.</p>
-
-<h2>Revise lo que cambia el reclamo</h2>
-<ul>
-<li><strong>Su opción de demanda.</strong> La ley vincula la opción de demanda que
-usted eligió con la pérdida no económica en reclamos por motorista sin seguro. Pregunte cómo aplica al suyo y lea nuestra
+<p>Primero revisamos qué opción de demanda le aplica. Lea nuestra
 <a href="../derecho-limitado-o-ilimitado-a-demandar/index.html">guía de derecho limitado o
-ilimitado</a>.</li>
-<li><strong>Un carro de empresa.</strong> Si la póliza de una empresa cubre el vehículo que
-manejaba, un empleado no puede recibir menos cobertura UM/UIM que el asegurado nombrado. Pida la
-página de declaraciones de la empresa.</li>
-<li><strong>Daños a la propiedad.</strong> La cobertura UM/UIM de daños a la propiedad tiene un
-límite agregado de $25,000 en pólizas emitidas o renovadas a partir del 1 de enero de 2023, con
-los primeros $500 excluidos.</li>
-<li><strong>Fuga del conductor.</strong> Un vehículo que huye se trata como vehículo sin seguro,
-y esta cobertura es la que paga.</li>
-</ul>
-<p>Hay cambios pendientes en Trenton, incluido un proyecto que haría obligatoria la cobertura
-UM/UIM. Solo ha sido presentado. Planifique con la ley tal como está hoy.</p>
-<p>En Starkman Firm usted ve al abogado, no a un gestor de casos. Si una aseguradora le ofreció su
-límite, llame antes de firmar: Cherry Hill 856-424-7277 o Perth Amboy 732-324-2011. No hay
-honorarios a menos que recuperemos para usted, y atendemos en inglés y español.</p>
+ilimitado</a> para ver lo que usted eligió.</p>
+
+<h2>Sepa dónde los tribunales no han resuelto la cuestión</h2>
+<p>Si la ley de auto sin culpa impide que una aseguradora de compensación demande al conductor
+culpable fue discutido. En <em>New Jersey Transit Corp. v. Sanchez</em> (N.J., 12 de mayo de 2020), la
+Corte Suprema quedó dividida por igual y dejó en pie la decisión de la División de Apelaciones a
+favor de la aseguradora, así que no hay una opinión vinculante de la Corte Suprema. Si una
+aseguradora persigue al otro conductor, pregunte a su abogado cómo le afecta.</p>
+
+<h2>Llame antes de firmar cualquier cosa</h2>
+<p>No dé una declaración grabada a ninguna aseguradora, y no firme un acuerdo de compensación ni un
+relevo del choque sin que alguien lo lea contra el otro reclamo. Un relevo de un lado puede
+reducir el otro.</p>
+<p>En Starkman Firm usted ve al abogado, no a un gestor de casos. Llame a Cherry Hill 856-424-7277
+o a Perth Amboy 732-324-2011. No cobramos honorarios a menos que recuperemos para usted, y
+atendemos en inglés y español.</p>
 """
 
 EN_FAQ = [
-    ("What is underinsured motorist coverage in New Jersey?",
-     "It is coverage on your own policy that pays when the driver who injured you has liability "
-     "limits lower than your underinsured motorist limits. Under N.J.S.A. 17:28-1.1, a standard "
-     "policy issued or renewed on or after January 1, 2026 must include at least $35,000 per "
-     "person and $70,000 per accident."),
-    ("How does New Jersey decide whether the other driver is underinsured?",
-     "By comparing limits, not damages. A vehicle is underinsured when the at-fault driver's "
-     "total liability limits are less than the underinsured motorist limits on your policy, and "
-     "those liability limits have been exhausted by settlement or judgment. If both of you carry "
-     "$35,000, there is no underinsured claim."),
-    ("How much will my underinsured motorist coverage pay?",
-     "Your limit is reduced by what you recover from the at-fault driver's liability coverage. "
-     "With $100,000 in UIM coverage and $35,000 recovered from the other driver, $65,000 remains."),
-    ("Can I stack underinsured motorist coverage in New Jersey?",
-     "No. N.J.S.A. 17:28-1.1(c) says UM/UIM coverage is not increased by stacking the limits of "
-     "multiple vehicles on one policy or multiple policies. Your UM/UIM limit also cannot exceed "
-     "your own liability limits."),
-    ("Do I have to tell my insurer before I settle with the at-fault driver?",
-     "Yes. In Ferrante v. New Jersey Manufacturers Insurance Group (N.J. Apr. 11, 2018), the "
-     "Supreme Court held that a driver who gave his carrier no notice of the litigation or the "
-     "proceedings could be denied UIM benefits. Give written notice of the lawsuit and of every "
-     "settlement offer before you accept."),
+    ("Does workers' comp cover a car accident while I am driving for work in New Jersey?",
+     "It can. Under N.J.S.A. 34:15-36, an employee who uses an employer-authorized vehicle is in "
+     "the course of employment during authorized operation of that vehicle on business the "
+     "employer authorized. In Keim v. Above All Termite & Pest Control (N.J. Nov. 21, 2023), the "
+     "Supreme Court held that both parts must be met. Ordinary commuting is generally not covered."),
+    ("Does workers' comp or my auto insurance PIP pay my medical bills after a work crash?",
+     "Workers' comp comes first. N.J.S.A. 39:6A-6 says benefits collectible under workers' "
+     "compensation insurance shall be deducted from the PIP benefits otherwise collectible."),
+    ("Can I sue the other driver if I am getting workers' comp in New Jersey?",
+     "Yes. N.J.S.A. 34:15-40 says your right to compensation does not bar your action against a "
+     "third person. The comp carrier is reimbursed from your recovery, less your expenses of suit "
+     "and attorney's fee."),
+    ("What happens if I wait too long to sue the other driver?",
+     "Under N.J.S.A. 34:15-40(f), if you neither settle nor sue within one year of the accident, "
+     "the comp carrier can send a written demand and, 10 days later, settle with or sue the other "
+     "driver. That settlement or judgment bars your own claim against that driver."),
+    ("How long do I have to report a work injury and file for comp in New Jersey?",
+     "Notice to your employer is due within 14 days, with limited relief up to 30 days and, for a "
+     "good excuse, up to 90 days (N.J.S.A. 34:15-17). The claim petition is due within two years "
+     "of the accident or the last payment (N.J.S.A. 34:15-51)."),
 ]
 
 ES_FAQ = [
-    ("¿Qué es la cobertura para motoristas con seguro insuficiente en Nueva Jersey?",
-     "Es la cobertura de su propia póliza que paga cuando el conductor que lo lesionó tiene "
-     "límites de responsabilidad menores que sus límites UIM. Según la N.J.S.A. 17:28-1.1, una "
-     "póliza estándar emitida o renovada a partir del 1 de enero de 2026 debe incluir al menos "
-     "$35,000 por persona y $70,000 por accidente."),
-    ("¿Cómo decide Nueva Jersey si el otro conductor tiene seguro insuficiente?",
-     "Comparando límites, no daños. Un vehículo tiene seguro insuficiente cuando el total de "
-     "límites de responsabilidad del conductor culpable es menor que los límites UIM de su póliza, "
-     "y esos límites se agotaron por acuerdo o sentencia. Si ambos tienen $35,000, no hay reclamo "
-     "UIM."),
-    ("¿Cuánto pagará mi cobertura UIM?",
-     "Su límite se reduce por lo que recupere de la cobertura de responsabilidad del conductor "
-     "culpable. Con $100,000 de cobertura UIM y $35,000 recuperados del otro conductor, quedan "
-     "$65,000."),
-    ("¿Puedo sumar la cobertura UIM de varios carros en Nueva Jersey?",
-     "No. La N.J.S.A. 17:28-1.1(c) dice que la cobertura UM/UIM no se aumenta sumando los límites "
-     "de varios vehículos de una póliza ni de varias pólizas. Su límite UM/UIM tampoco puede "
-     "exceder sus propios límites de responsabilidad."),
-    ("¿Debo avisar a mi aseguradora antes de llegar a un acuerdo con el conductor culpable?",
-     "Sí. En Ferrante v. New Jersey Manufacturers Insurance Group (N.J., 11 de abril de 2018), la "
-     "Corte Suprema resolvió que un conductor que no dio aviso a su aseguradora del litigio ni de "
-     "los procedimientos podía perder los beneficios UIM. Avise por escrito de la demanda y de "
-     "cada oferta antes de aceptarla."),
+    ("¿Cubre la compensación laboral un choque mientras manejo para el trabajo en Nueva Jersey?",
+     "Puede cubrirlo. Según la N.J.S.A. 34:15-36, un empleado que usa un vehículo autorizado por "
+     "el empleador está en el curso del empleo durante la operación autorizada de ese vehículo en "
+     "asuntos autorizados por el empleador. En Keim v. Above All Termite & Pest Control (N.J., 21 "
+     "de noviembre de 2023), la Corte Suprema resolvió que deben cumplirse ambas partes. Ir y "
+     "venir del trabajo normalmente no está cubierto."),
+    ("¿Quién paga mis cuentas médicas después de un choque laboral: la compensación o el PIP?",
+     "Primero la compensación laboral. La N.J.S.A. 39:6A-6 dice que los beneficios cobrables bajo "
+     "el seguro de compensación laboral se deducirán de los beneficios PIP que de otro modo se "
+     "podrían cobrar."),
+    ("¿Puedo demandar al otro conductor si recibo compensación laboral en Nueva Jersey?",
+     "Sí. La N.J.S.A. 34:15-40 dice que su derecho a compensación no impide su acción contra un "
+     "tercero. La aseguradora de compensación se reembolsa de su recuperación, menos sus gastos "
+     "de demanda y honorarios de abogado."),
+    ("¿Qué pasa si espero demasiado para demandar al otro conductor?",
+     "Según la N.J.S.A. 34:15-40(f), si no llega a un acuerdo ni demanda dentro de un año del "
+     "accidente, la aseguradora de compensación puede enviar una demanda escrita y, 10 días "
+     "después, negociar con el otro conductor o demandarlo. Ese acuerdo o sentencia impide su "
+     "propio reclamo contra ese conductor."),
+    ("¿Cuánto tiempo tengo para reportar una lesión laboral y pedir compensación en Nueva Jersey?",
+     "El aviso al empleador vence a los 14 días, con alivio limitado hasta 30 días y, con una "
+     "buena excusa, hasta 90 días (N.J.S.A. 34:15-17). La petición vence a los dos años del "
+     "accidente o del último pago (N.J.S.A. 34:15-51)."),
 ]
 
 EN_DISCLAIMER = ("This article is general information about New Jersey law, not legal advice, and "
