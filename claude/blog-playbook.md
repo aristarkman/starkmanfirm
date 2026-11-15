@@ -79,6 +79,7 @@ with the "not legal advice" disclaimer.
 | 4 | 2026-10-01 | `construction-injury-comp-and-third-party-claim-nj` | Construction injuries: comp vs. the third-party claim |
 | 5 | 2026-10-15 | `slip-and-fall-notice-nj` | Slip and fall: proving the owner had notice |
 | 6 | 2026-11-01 | `underinsured-motorist-coverage-nj` | Underinsured motorist coverage: the limit-vs-limit test, the offset, no stacking, notice before settling |
+| 7 | 2026-11-15 | `injured-driving-for-work-nj` | Injured driving for work: authorized vehicle rule, comp before PIP, the third-party claim and lien, verbal threshold (narrowed per queue note) |
 
 **Shelved:** a 2026-09-01 retaliation post (`fired-for-filing-workers-comp-nj`) was written
 and verified, then shelved at Ari's direction. `copy_2026-09-01.py` is retained. Do not
@@ -92,29 +93,58 @@ publish it unasked.
 
 ## Topic queue — take the top unused one, unless something more timely has happened
 
-1. Injured driving for work in NJ: comp, third-party, or both — **narrow or merge**; the
-   construction post covers the comp/third-party split and the 34:15-40 lien in general
-   terms. Keep only if it goes deep on auto-specific ground: PIP vs. comp primacy, the
-   verbal threshold applying to the third-party auto case, UM/UIM stacking with a comp lien
-2. Hurt at work but the employer says you're a 1099 contractor
-3. Social media and your NJ injury claim: what the carrier's investigator actually looks for
-4. The independent medical exam: what the carrier's doctor is actually measuring
-5. The workers' comp lien on your injury settlement: what N.J.S.A. 34:15-40 really leaves
+1. Hurt at work but the employer says you're a 1099 contractor
+2. Social media and your NJ injury claim: what the carrier's investigator actually looks for
+3. The independent medical exam: what the carrier's doctor is actually measuring
+4. The workers' comp lien on your injury settlement: what N.J.S.A. 34:15-40 really leaves
    you — a numbers post working a sample recovery through subsections (b), (c) and (e),
    including the $750 cap and the 33 1/3% reduction. "Workers comp lien" is high-intent
-6. **Snow and ice on a New Jersey sidewalk: whose job was it?** The 10-15 post states the
+5. **Snow and ice on a New Jersey sidewalk: whose job was it?** The 10-15 post states the
    *Stewart* / *Luchejko* commercial-vs-residential line in two sentences but does not work
    it — lease-shifting between landlord and tenant, the condo and co-op cases, the "created
    or exacerbated" exception for residential owners, and municipal snow ordinances that
    impose a duty to the town but not to you. Strongly seasonal; schedule for December
    or January
-7. Hit-and-run and phantom vehicles in NJ: what the uninsured motorist claim requires —
+6. Hit-and-run and phantom vehicles in NJ: what the uninsured motorist claim requires —
    follow-up to the 2026-11-01 UIM post; verify the physical-contact and proof rules from
    the policy language and published opinions before writing
+7. Employer-provided vehicles and ride-share/gig driving in NJ: who is the employer, and whose insurance applies — verify the 1099 / ABC-test rules from NJ DOL sources first (pairs with item 1)
 
 **Dropped:** NJ permanency awards / the schedule of disabilities — the 2026-09-15 post
 already covers the 600-week math and the scheduled members. The authorized treating
 physician — covered by the 2026-08-31 doctor post; revisit only from the IME angle (item 4).
+
+## Facts verified 2026-11-15 (re-verify before reuse)
+
+- **Primary source for 34:15-xx text:** NJ Division of Workers' Compensation compilation
+  `nj.gov/labor/workerscompensation/assets/PDFs/Forms/wc_law.pdf` (rev. Dec. 15, 2025). It
+  extracts cleanly with pypdf. pub.njleg.gov and Justia statute URLs returned 404/403 this run.
+- **N.J.S.A. 34:15-36** — employment begins when the employee arrives at the employer's place of
+  employment to report for work; four rules (premises, special mission, paid travel time,
+  authorized vehicle). Authorized vehicle: employment of "any employee who utilizes an employer
+  authorized vehicle shall commence and terminate with the . . . authorized operation of a
+  vehicle on business authorized by the employer."
+- ***Keim v. Above All Termite & Pest Control***, A-30-22, NJ Supreme Court, decided **Nov. 21,
+  2023**, unanimous — covered when (1) employer authorized the vehicle and (2) operation was for
+  business expressly authorized (trip to the shop for supplies). Not covered if "merely"
+  commuting. **253 N.J. 289 is the certification grant, not the opinion;** the post cites by
+  name, court and date.
+- **N.J.S.A. 39:6A-6** — benefits "collectible under workers' compensation insurance" are
+  deducted from PIP. Text read as quoted in *NJ Transit v. Sanchez* (A-68-18), **not** codified
+  text; recheck before reuse.
+- ***NJ Transit Corp. v. Sanchez***, A-68-18, decided **May 12, 2020** — affirmed by an
+  **equally divided Court**, so no binding Supreme Court holding; Appellate Division ruling at
+  457 N.J. Super. 98 (App. Div. 2018) stands. Do not cite the concurrence as law.
+- **N.J.S.A. 34:15-40** — (a)-(f) as above: carrier reimbursed "less employee's expenses of suit
+  and attorney's fee"; **(c)** carrier owes the difference if recovery is smaller; **(e)** $750 /
+  33 1/3%; **(f)** one year, written demand, 10 days, carrier's settlement or judgment bars the
+  employee. **34:15-7** — comp paid "without regard to the negligence of the employer."
+- **34:15-17** 14/30/90-day notice and **34:15-51** two-year petition re-read in the same file.
+- **39:6A-8(a)** six categories confirmed in NJ Model Civil Jury Charge 5.33 (rev. 04/2018).
+- Personal injury limit **two years** — NJ Courts FAQ (cites N.J.S.A. 2A:14-1 et seq.). The
+  2A:14-2 cite itself was not read from the statute this run.
+- **Not verified, so not in the post:** which tort option applies to an employee hurt in an
+  employer's vehicle; UM/UIM interplay with a comp lien; whether comp pays pain and suffering.
 
 ## Facts verified 2026-11-01 (re-verify before reuse)
 
